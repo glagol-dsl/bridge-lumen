@@ -15,8 +15,7 @@ class ContainerTest extends \PHPUnit_Framework_TestCase
         $illuminateContainer = $this->getMockBuilder(IlluminateContainer::class)
             ->getMock();
 
-        $container = new Container($illuminateContainer);
-        $container->bind(ContainerInterface::class, Container::class);
+        (new Container($illuminateContainer))->bind(ContainerInterface::class, Container::class);
     }
 
     public function testShouldThrowExceptionWhenAccessingNonBoundService()
