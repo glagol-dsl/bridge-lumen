@@ -1,16 +1,8 @@
 {
-    "name": "bulgaria-php/glagol-php-dic-laravel",
-    "description": "Dependency inverted container for accessing the Laravel Container",
+    "name": "bulgaria-php/glagol-bridge-laravel",
+    "description": "Glagol DSL Laravel Framework bridge",
     "type": "library",
-    "require": {
-        "psr/container": "dev-master",
-        "illuminate/container": "^5.3",
-        "bulgaria-php/glagol-php-dic": "^1.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "5.6.*"
-    },
-    "license": "gnu-gpl3",
+    "license": "GPL-3",
     "authors": [
         {
             "name": "Yoan-Alexander Grigorov",
@@ -20,8 +12,5 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {"Glagol\\Binding\\Laravel\\": "src/"}
-    },
-    "autoload-dev": {
-        "psr-4": {"GlagolTest\\Binding\\Laravel\\": "test/"}
     }
 }
