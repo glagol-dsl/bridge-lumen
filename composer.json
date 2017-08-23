@@ -1,6 +1,6 @@
 {
-    "name": "bulgaria-php/glagol-bridge-laravel",
-    "description": "Glagol DSL Laravel Framework bridge",
+    "name": "bulgaria-php/glagol-bridge-lumen",
+    "description": "Glagol DSL Lumen Framework bridge",
     "type": "library",
     "license": "GPL-3",
     "authors": [
@@ -11,9 +11,9 @@
     ],
     "minimum-stability": "dev",
     "autoload": {
-        "psr-4": {"Glagol\\Bridge\\Laravel\\": "src/"}
+        "psr-4": {"Glagol\\Bridge\\Lumen\\": "src/"}
     },
     "require": {
-        "laravel/framework": "^5.3"
+        "laravel/lumen-framework": "5.4.*"
     }
 }
