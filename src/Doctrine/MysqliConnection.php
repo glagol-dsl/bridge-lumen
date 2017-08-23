@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Glagol\Binding\Lumen\Doctrine;
+namespace Glagol\Bridge\Lumen\Doctrine;
 
 use LaravelDoctrine\ORM\Configuration\Connections\Connection;
 
