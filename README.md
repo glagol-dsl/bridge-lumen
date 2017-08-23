@@ -1,1 +1,1 @@
-# Glagol DSL - Laravel Bridge
+# Glagol DSL - Lumen Bridge
