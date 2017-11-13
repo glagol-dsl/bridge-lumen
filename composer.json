@@ -10,7 +10,8 @@
         }
     ],
     "autoload": {
-        "psr-4": {"Glagol\\Bridge\\Lumen\\": "src/"}
+        "psr-4": {"Glagol\\Bridge\\Lumen\\": "src/"},
+        "files": ["src/Exceptions/trace_translating.php"]
     },
     "require": {
         "laravel/lumen-framework": "5.5.*",
