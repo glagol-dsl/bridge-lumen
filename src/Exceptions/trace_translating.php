@@ -22,7 +22,13 @@ function to_glagol_trace_from_exception(Throwable $exception): iterable
 function only_having_source_maps(): Closure
 {
     return function (array $trace) {
-        return has_source_map(array_get($trace, 'file'), base_path());
+        $filePath = array_get($trace, 'file');
+
+        if (empty($filePath)) {
+            return false;
+        }
+
+        return has_source_map($filePath, base_path());
     };
 }
 
