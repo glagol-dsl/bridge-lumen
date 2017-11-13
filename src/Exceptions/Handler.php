@@ -69,7 +69,7 @@ class Handler extends ExceptionHandler
                     'message' => $exception->getMessage(),
                     'line' => $exception->getLine(),
                     'file' => $exception->getFile(),
-                    'trace' => $exception->getTrace()
+                    'trace' => $this->extractTrace($exception)
                 ];
             }
         }
@@ -90,5 +90,17 @@ class Handler extends ExceptionHandler
     private function showOriginalException($request): bool
     {
         return strtolower($request->header('Show-Php-Debug', 'no')) === 'yes';
+    }
+
+    /**
+     * @param Exception $exception
+     * @return array
+     */
+    private function extractTrace(Exception $exception): array
+    {
+        return array_map(function (array $item) {
+            unset($item['args']);
+            return $item;
+        }, $exception->getTrace());
     }
 }
