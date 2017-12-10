@@ -11,12 +11,13 @@ use Glagol\SourceMap\MappingCollection;
 use Illuminate\Support\Collection;
 use Throwable;
 
-function to_glagol_trace_from_exception(Throwable $exception): iterable
+function to_glagol_trace_from_exception(Throwable $exception): Collection
 {
     return get_trace($exception)
-            ->filter(only_having_source_maps())
-            ->map(to_glagol_trace())
-            ->filter();
+        ->filter(only_having_source_maps())
+        ->map(to_glagol_trace())
+        ->filter()
+        ->values();
 }
 
 function only_having_source_maps(): Closure
@@ -81,8 +82,10 @@ function get_trace(Throwable $exception): Collection
 {
     $trace = $exception->getTrace();
     // we add the exception's line and file to the first trace
-    $trace[0]['line'] = $exception->getLine();
-    $trace[0]['file'] = $exception->getFile();
+    array_unshift($trace, [
+        'line' => $exception->getLine(),
+        'file' => $exception->getFile(),
+    ]);
 
     return collect($trace);
 }
