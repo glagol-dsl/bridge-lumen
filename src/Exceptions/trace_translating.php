@@ -48,7 +48,7 @@ function to_glagol_trace(): Closure
         }
 
         return [
-            'file' => $mapping->getOriginalSource()->toPath($basePath),
+            'file' => $mapping->getOriginalSource()->toPath(),
             'line' => $mapping->getOriginalLine(),
             'name' => $mapping->getName()
         ];
