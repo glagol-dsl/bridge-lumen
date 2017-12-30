@@ -15,11 +15,12 @@
     },
     "require": {
         "laravel/lumen-framework": "5.5.*",
+        "laravel-doctrine/orm": "^1.4",
         "bulgaria-php/glagol-php-helpers": "^0.2",
+        "bulgaria-php/glagol-dsl-php-source-map": "0.*",
         "php-ds/php-ds": "^1.1",
         "php": "^7.1",
-        "ext-ds": "^1.1",
-        "bulgaria-php/glagol-dsl-php-source-map": "0.*"
+        "ext-ds": "^1.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7"
