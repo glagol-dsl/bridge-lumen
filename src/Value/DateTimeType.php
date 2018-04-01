@@ -7,12 +7,14 @@ use Doctrine\DBAL\Types\DateTimeTzType;
 
 class DateTimeType extends DateTimeTzType
 {
+    const TYPE_NAME = 'glagol_datetime_datetime';
+
     /**
      * {@inheritdoc}
      */
     public function getName()
     {
-        return 'glagol_datetime_datetime';
+        return self::TYPE_NAME;
     }
 
     /**
