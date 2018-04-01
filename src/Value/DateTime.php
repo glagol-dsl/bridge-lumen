@@ -5,10 +5,16 @@ use DateTimeZone;
 
 class DateTime extends \DateTimeImmutable implements \JsonSerializable
 {
-    public static function createFromFormat($format, $time, DateTimeZone $timezone = null)
+    /**
+     * @param string $format
+     * @param string $time
+     * @param null|DateTimeZone $object
+     * @return bool|\DateTimeImmutable|static
+     */
+    public static function createFromFormat($format, $time, $object = null)
     {
         $realDt = new static();
-        $parentDt = parent::createFromFormat($format, $time, $timezone);
+        $parentDt = parent::createFromFormat($format, $time, $object);
 
         if (!$parentDt) {
             return false;
