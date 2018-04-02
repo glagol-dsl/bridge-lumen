@@ -9,6 +9,7 @@ trait JsonSerializeTrait
         $properties = [];
 
         foreach ($this as $property => $value) {
+            if ($property[0] === '_') continue;
             $properties[snake_case($property)] = $value;
         }
 
