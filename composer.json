@@ -1,5 +1,5 @@
 {
-    "name": "bulgaria-php/glagol-bridge-lumen",
+    "name": "glagol-dsl/bridge-lumen",
     "description": "Glagol DSL Lumen Framework bridge",
     "type": "library",
     "license": "GPL-3.0",
@@ -16,8 +16,7 @@
     "require": {
         "laravel/lumen-framework": "5.5.*",
         "laravel-doctrine/orm": "^1.4",
-        "bulgaria-php/glagol-php-helpers": "^0.2",
-        "bulgaria-php/glagol-dsl-php-source-map": "0.*",
+        "glagol-dsl/php-source-maps": "0.*",
         "php-ds/php-ds": "^1.1",
         "php": "^7.1",
         "ext-ds": "^1.1"
